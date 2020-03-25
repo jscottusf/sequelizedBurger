@@ -1,0 +1,24 @@
+<div class="menu-items-div">
+          {{#each burger_menu}}
+          <div class="menu-item">
+            {{this.burger_name}} <button id="{{this.id}}" class="btn btn-sm btn-danger devour-burger">ORDER +</button>
+          </div>
+          {{#each}}
+        </div>
+
+
+menu.all(function(data) {
+        var hbsObject2 = {
+            burger_menu: data
+        };
+        console.log(hbsObject2);
+        res.render("index", hbsObject2);
+    })
+
+// = mysql.createConnection({
+//     host: "localhost",
+//     port: 3306,
+//     user: "root",
+//     password: "rootpass",
+//     database: "burgers_db"
+// });

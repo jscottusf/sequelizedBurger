@@ -1,0 +1,52 @@
+body {
+    width: 100%;
+    /* background-color: #ffcc66; */
+}
+
+h1, h2 {
+    color: #e83c28
+}
+
+#header {
+    font-weight: 600;
+}
+
+.devour, .devoured {
+    width: auto;
+    border-radius: 15px;
+    background-color: #fef1ee;
+    padding: 20px;
+}
+
+.devour h5, .devoured h5 {
+    font-weight: 600;
+    color: #e83c28
+}
+
+.devour h5:hover, .devoured h5:hover {
+    cursor: pointer;
+}
+
+.menu-item {
+    text-transform: uppercase;
+}
+
+.menu-items-div p {
+    color: rgb(63, 61, 61);
+}
+
+.devour p, .devoured, .menu-item  {
+    font-weight: 600;
+}
+
+.btn, .form-control {
+    border-radius: 50px;
+}
+
+.btn-sm {
+    float: right;
+}
+
+#add {
+    float: right;
+}

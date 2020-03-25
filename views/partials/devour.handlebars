@@ -1,0 +1,45 @@
+<div class="col-lg-5">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="devour">
+              <h5 data-toggle="collapse" data-target="#collapseExample" aria-expanded="true">
+                BURGERS TO DEVOUR <span id="add">+</span>
+              </h5>
+              <div class="collapse show" id="collapseExample">
+                <div>
+                  {{#each burgers}}
+                    {{#unless devoured}}
+                    <p>
+                      {{this.burger_name}}
+                      <button data-burgerid="{{this.id}}" class="btn btn-sm btn-danger devour-burger">Devour it!</button>
+                    </p>
+                    {{/unless}}
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="devoured">
+              <h5 data-toggle="collapse" data-target="#collapseExample2" aria-controls="collapseExample">
+                DEVOUR HISTORY <span id="add">+</span>
+              </h5>
+              <div class="collapse" id="collapseExample2">
+                <div>
+                  {{#each burgers}}
+                    {{#if devoured}}
+                    <p>
+                      {{this.burger_name}}
+                    </p>
+                    {{/if}}
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

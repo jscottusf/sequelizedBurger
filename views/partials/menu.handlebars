@@ -1,0 +1,10 @@
+<div class="menu-items-div">
+    {{#each menu}}
+        <div class="menu-item">
+            {{this.burger_name}} @ {{this.burger_price}} <button id="{{this.burger_name}}" class="btn btn-sm btn-outline-danger menu-order">ADD+</button>
+        </div>
+        <p>
+            {{this.burger_description}}
+        </p>
+    {{/each}}
+</div>

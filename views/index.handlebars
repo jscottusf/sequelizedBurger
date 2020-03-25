@@ -1,0 +1,14 @@
+<div class="container my-3 py-3">
+    <div class="row">
+      <div class="col-lg-7">
+        <h2 id="header"> BURGER MENU </h2>
+        {{> menu}}
+        <div class="input-group mb-3" id="create-burger">
+          <input type="text" class="form-control" placeholder="New burger" id="new-burger" aria-describedby="order-burger">
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" type="button" id="order-burger">Order Burger</button>
+          </div>
+        </div>
+      </div>
+      {{> devour}}
+</div>
