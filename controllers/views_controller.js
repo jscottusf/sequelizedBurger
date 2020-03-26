@@ -4,23 +4,22 @@ const db = require("../models");
 
 
 module.exports = function(app) {
-    app.get('/', function(req, res) {
+    app.get('/', getMenu, getBurgers, renderBurgers);
+
+    function getMenu(req, res, next) {
         db.Menu.findAll({}).then(function(dbMenu) {
-            res.render("index", {dbMenu});
+            req.menu = dbMenu;
+            next();
         });
-    });
+    }
+    function getBurgers(req, res, next) {
+        db.Burger.findAll({}).then(function(dbBurger) {
+            req.burger = dbBurger;
+            next();
+        });
+    }
+
+    function renderBurgers(req, res) {
+        res.render("index", { menu: req.menu, burgers: req.burger});
+    }
 };
-
-// const express = require("express");
-// const router = express.Router();
-// const db = require("../models");
-
-// router.get('/', function(req, res) {
-//     db.Menu.findAll({}).then(function(dbMenu) {
-//         console.log(dbMenu);
-//         req.menu = dbMenu;
-//         res.render("index", {menu: req.menu} )
-//     });
-// });
-
-// module.exports = router;
