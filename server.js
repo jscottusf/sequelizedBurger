@@ -11,8 +11,6 @@ app.use(express.static("public"));
 require("./controllers/burgers_controller")(app);
 require("./controllers/menu_controller")(app);
 require("./controllers/views_controller")(app);
-// const routes = require('./controllers/views_controller');
-// app.use(routes);
 
 //{ force: true } <- inside sync to run schema and seeds everytime program starts
 db.sequelize.sync().then(function() {

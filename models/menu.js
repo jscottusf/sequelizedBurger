@@ -19,10 +19,6 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         timestamps: false
     });
-
-    // Menu.associate = function(models) {
-    //    Menu.hasMany(models.Burger);
-    // };
     
     return Menu;
 }
