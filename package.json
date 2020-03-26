@@ -9,18 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jscottusf/burger.git"
+    "url": "git+https://github.com/jscottusf/sequelizedBurger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jscottusf/burger/issues"
+    "url": "https://github.com/jscottusf/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/jscottusf/burger#readme",
+  "homepage": "https://github.com/jscottusf/sequelizedBurger#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0"
+  },
+  "devDependencies": {
+    "handlebars": "^4.5.0",
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1"
   }
 }
